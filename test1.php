@@ -121,12 +121,13 @@
                     value="<?php echo (isset($_POST['search'])?$_POST['search']:"");?>"> <input
                     class="btn btn-success btn-sm" type="submit" id="submit" name="submit" value="Submit"><br>
                 <label for="type">ประเภทการค้นหา</label><br>
+                
                 <select name="type" id="type">
-                    <option value="linear" <?php echo (isset($_POST['type'])=='linear'? "selected = 'true'":"");?>>
+                    <option value="linear" <?php echo (isset($_POST['submit'])?(($_POST['type'])=='linear'? "selected = 'true'":""):"selected = 'true'");?>>
                         Linear Search</option>
-                    <option value="binary" <?php echo (isset($_POST['type'])=='binary'? "selected = 'true'":"");?>>
+                    <option value="binary" <?php echo  (isset($_POST['submit'])?(($_POST['type'])=='binary'? "selected = 'true'":""):" ");?>>
                         Binary Search</option>
-                    <option value="bubble" <?php echo (isset($_POST['type'])=='bubble'? "selected = 'true'":"");?>>
+                    <option value="bubble" <?php echo  (isset($_POST['submit'])?(($_POST['type'])=='bubble'? "selected = 'true'":""):" ");?>>
                         Bubble Sort</option>
                 </select><br>
                 <label for="result">ผลลัพธ์</label><br>
